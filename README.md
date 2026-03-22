@@ -260,7 +260,7 @@ Then add screenshots with these filenames:
 
 ### Architecture (Power BI)
 
-![Power BI Architecture](docs/images/powerbi-architecture.png)
+![Power BI Architecture](docs/images/powerbi-architecture.jpg)
 
 ### Airflow Pipeline
 
@@ -269,23 +269,19 @@ Then add screenshots with these filenames:
 
 ### BI Dashboard - Revenue Analysis
 
-![Revenue Analysis](docs/images/bi-dashboard-revenue.png)
+![Revenue Analysis](docs/images/bi-dashboard-revenue.jpg)
 
 ### BI Dashboard - Fraud Analysis
 
-![Fraud Analysis](docs/images/bi-dashboard-fraud.png)
+![Fraud Analysis](docs/images/bi-dashboard-fraud.jpg)
 
 ### BI Dashboard - Top Products
 
-![Top Products](docs/images/bi-dashboard-top-products.png)
+![Top Products](docs/images/bi-dashboard-top-products.jpg)
 
 ### BI Dashboard - Customer Segmentation
 
-![Customer Segmentation](docs/images/bi-dashboard-segmentation.png)
-
-### API Inference
-
-![API Inference](docs/images/api-inference.png)
+![Customer Segmentation](docs/images/bi-dashboard-segmentation.jpg)
 
 ## 14. Known Gaps and Hardening Checklist
 
