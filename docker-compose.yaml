@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: salemessid15122003
+      POSTGRES_DB: retail_data_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:salemessid15122003@postgres/retail_data_platform
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./ml:/opt/airflow/ml
+      - ./data_generator:/opt/airflow/data_generator
+      - ./data:/opt/airflow/data   # 🔥 IMPORTANT (for init_db.sql)
+    ports:
+      - "8080:8080"
+    command: standalone
+
+volumes:
+  postgres_data:
